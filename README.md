@@ -1,28 +1,22 @@
 # Slack::Courier
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/slack/courier`. To experiment with that code, run `bin/console` for an interactive prompt.
+## what is this
 
-TODO: Delete this and the text above, and describe your gem
+slack からアクセスできない箇所にある画像を代りにアップロードして channel に展開してくれる bot
 
 ## Installation
 
-Add this line to your application's Gemfile:
-
 ```ruby
-gem 'slack-courier'
+git clone https://github.com/takesato/slack-courier.git
 ```
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install slack-courier
 
 ## Usage
 
-TODO: Write usage instructions here
+```
+cd slack-courier
+bundle install
+SLACK_TOKEN=your_slack_tokenx bundle exec bin/slack-courier
+```
 
 ## Development
 
