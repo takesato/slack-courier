@@ -3,4 +3,11 @@
 require "bundler/setup"
 require "slack/courier"
 
+require 'dotenv'
+Dotenv.load
+
+URL_REGEXP = Regexp.new(ENV['URL_REGEXP'])
+BOT_NAME = ENV['BOT_NAME']
+BOT_IMAGE = ENV['BOT_IMAGE']
+
 Slack::Courier::Client.new(ENV['SLACK_TOKEN']).start

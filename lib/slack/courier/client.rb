@@ -33,6 +33,7 @@ module Slack
               next if data['ts'].to_i <= @initialize_time
               channel = data['channel']
               URI.extract(data['text'], ["http", "https"]).each do |url|
+                next unless data['text'] =~ URL_REGEXP
                 response = upload(channel, url)
                 send_message channel, response['file']['url'] if response['ok'] == true
               end
@@ -63,7 +64,7 @@ module Slack
       def send_message(channel, text)
         message = {
           token: @token,
-          username: 'Courier',
+          username: BOT_NAME,
           channel: channel,
           text: text,
         }

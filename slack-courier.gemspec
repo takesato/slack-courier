@@ -27,5 +27,6 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "rake", "~> 10.0"
 
   spec.add_runtime_dependency "httmultiparty"
+  spec.add_runtime_dependency "dotenv"
   spec.add_runtime_dependency "multi_json", ">= 1.0.3", "~> 1.0"
   spec.add_runtime_dependency "faye-websocket", "~> 0.9.2"end
